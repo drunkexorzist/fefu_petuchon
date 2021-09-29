@@ -1,15 +1,15 @@
-lst=[]
-lst1=[]
-lst2=[]
-for i in range(6):
-    a=input()
-    lst.append(a)
-for j in range(6):
-    if j%2==0:
-        lst1.append(lst[j])
+lst = list(map(int, input().split()))
+
+lst_max = max(lst)
+lst_min = min(lst)
+
+lst_out = []
+
+for i in lst:
+    a = lst.index(i)
+    if a == lst.index(lst_max):
+        lst_out.append(lst_min)
     else:
-        lst2.append(lst[j])
-str1=', '.join(lst1)
-str2=', '.join(lst2)
-print(str1)
-print(str2)
+        lst_out.append(i)
+        
+print(*lst_out)
