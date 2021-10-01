@@ -1,1 +1,4 @@
-MyVariable
+3
+M8103	Sidorov Sidor
+M8888	Petrov Petr
+M8103	Ivanov Ivan
