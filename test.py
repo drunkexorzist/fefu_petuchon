@@ -1,15 +1,17 @@
-lst = list(map(int, input().split()))
+lst = []
+lst_1 = []
+lst_2 = []
 
-lst_max = max(lst)
-lst_min = min(lst)
+for i in range(6):
+    lst.append(input())
 
-lst_out = []
+for h in range(len(lst)):
+    if h % 2 == 0:
+        lst_1.append(lst[h])
 
-for i in lst:
-    a = lst.index(i)
-    if a == lst.index(lst_max):
-        lst_out.append(lst_min)
-    else:
-        lst_out.append(i)
-        
-print(*lst_out)
+for j in range(len(lst)):
+    if j % 2 != 0:
+        lst_2.append(lst[j])
+
+print(", ".join(lst_1))
+print(", ".join(lst_2))
